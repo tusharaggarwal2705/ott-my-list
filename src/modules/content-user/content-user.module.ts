@@ -18,7 +18,7 @@ import { UserController } from '../../controllers/user.controller';
 import { MongooseUserRepository } from '../../repositories/mongoose-user.repository';
 import { RedisModule } from '../redis/redis.module';
 
-@Module({
+@Module({ 
   imports: [
     MongooseModule.forFeature([ 
       { name: MovieContent.name, schema: MovieSchema },
