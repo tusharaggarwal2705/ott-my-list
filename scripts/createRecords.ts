@@ -5,7 +5,7 @@ import * as dotenv from 'dotenv';
 
 dotenv.config();
 
-async function createSampleData() {
+async function createSampleData() { 
 
     await mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@my-cluster.yw89x0n.mongodb.net/`, {
         useNewUrlParser: true,

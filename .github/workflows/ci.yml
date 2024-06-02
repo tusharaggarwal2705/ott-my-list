@@ -42,7 +42,7 @@ jobs:
           chmod 400 key.pem
           scp -o StrictHostKeyChecking=no -i key.pem -r dist/* $EC2_USER@$EC2_HOST:/home/$EC2_USER/ott-my-list/dist
           ssh -o StrictHostKeyChecking=no -i key.pem $EC2_USER@$EC2_HOST << 'EOF'
-            cd /home/$EC2_USER/ott-my-list/dist
+            cd /home/ec2-user/ott-my-list/dist
             npm install
             pm2 restart nestjs-app || pm2 start dist/main.js --name nestjs-app
           EOF  
