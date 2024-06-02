@@ -32,4 +32,20 @@ jobs:
 
       - name: Build the project
         run: npm run build
-
+      
+      - name: Deploy to EC2
+        env:
+          AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          EC2_USER: ${{ secrets.EC2_USER }}
+          EC2_HOST: ${{ secrets.EC2_HOST }}
+          EC2_KEY: ${{ secrets.EC2_KEY }}
+        run: |
+          echo "${{ secrets.EC2_KEY }}" > key.pem
+          chmod 400 key.pem
+          scp -o StrictHostKeyChecking=no -i key.pem -r dist/* $EC2_USER@$EC2_HOST:/home/$EC2_USER/your-repo/dist
+          ssh -o StrictHostKeyChecking=no -i key.pem $EC2_USER@$EC2_HOST << 'EOF'
+            cd /home/$EC2_USER/your-repo
+            npm install
+            pm2 restart nestjs-app || pm2 start dist/main.js --name nestjs-app
+          EOF  
