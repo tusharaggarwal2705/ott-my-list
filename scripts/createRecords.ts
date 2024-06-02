@@ -13,7 +13,7 @@ async function createSampleData() {
     });
     const UserModel = mongoose.model('User', UserSchema);
     const MovieModel = mongoose.model('MovieContent', MovieSchema);
-    const TVShowModel = mongoose.model('TVShowContent', TVShowSchema);
+    const TVShowModel = mongoose.model('TVShowContent', TVShowSchema); 
 
     const movies = Array.from({ length: 100 }).map((_, index) => ({
         title: `Movie Title ${index + 1}`,
