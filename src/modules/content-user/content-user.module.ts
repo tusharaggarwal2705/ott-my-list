@@ -20,7 +20,7 @@ import { RedisModule } from '../redis/redis.module';
 
 @Module({
   imports: [
-    MongooseModule.forFeature([
+    MongooseModule.forFeature([ 
       { name: MovieContent.name, schema: MovieSchema },
       { name: TVShowContent.name, schema: TVShowSchema },
       { name: User.name, schema: UserSchema },
