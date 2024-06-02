@@ -1,11 +1,13 @@
 import { MovieSchema, TVShowSchema } from "../src/dbModels/content.schema"
 import { UserSchema } from "../src/dbModels/user.schema"
 import * as mongoose from 'mongoose';
-import { settings } from "../src/utilities/constant"
+import * as dotenv from 'dotenv';
+// Load environment variables from .env file
+dotenv.config();
 
 async function createSampleData() {
 
-    await mongoose.connect(`mongodb+srv://${settings.DB.USER}:${settings.DB.PASSWORD}@my-cluster.yw89x0n.mongodb.net/`, {
+    await mongoose.connect(`mongodb+srv://${process.env.DB_USER}:${process.env.DB_PASSWORD}@my-cluster.yw89x0n.mongodb.net/`, {
         useNewUrlParser: true,
         useUnifiedTopology: true,
     });

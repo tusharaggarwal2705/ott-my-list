@@ -1,4 +1,4 @@
-import { PAGE_SIZE } from './constant';
+export const PAGE_SIZE = 10;
 
 export const getSkipLimit = (page = 1, pageSize?: number) => {
   const skip = (page - 1) * PAGE_SIZE;

@@ -1,15 +1,14 @@
 import { Injectable } from '@nestjs/common';
 import Redis from 'ioredis';
-import { settings } from 'src/utilities/constant';
 
 @Injectable()
 export class RedisService {
   private client: Redis;
 
   constructor() {
-    const host = settings.REDIS.HOST;
-    const port = settings.REDIS.PORT;
-    const password = settings.REDIS.PASSWORD;
+    const host = process.env.REDIS_HOST;
+    const port = parseInt(process.env.REDIS_PORT);
+    const password = process.env.REDIS_PASSWORD;
     this.client = new Redis({
       host,
       port,

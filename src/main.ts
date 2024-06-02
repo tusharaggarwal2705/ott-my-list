@@ -5,7 +5,7 @@ import * as express from 'express';
 import * as dotenv from 'dotenv';
 
 // Load environment variables from .env file
-dotenv.config({ path: '.env' });
+dotenv.config();
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
