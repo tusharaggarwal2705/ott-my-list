@@ -2,7 +2,7 @@ import { MovieSchema, TVShowSchema } from "../src/dbModels/content.schema"
 import { UserSchema } from "../src/dbModels/user.schema"
 import * as mongoose from 'mongoose';
 import * as dotenv from 'dotenv';
-// Load environment variables from .env file
+
 dotenv.config();
 
 async function createSampleData() {
