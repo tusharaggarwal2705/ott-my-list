@@ -2,30 +2,30 @@ import { ApiProperty } from '@nestjs/swagger';
 import { Genre } from '../../utilities/interfaces/content.interface';
 
 class Preferences {
-    @ApiProperty()
-    favouriteGenres?: Genre[]
+  @ApiProperty()
+  favouriteGenres?: Genre[];
 
-    @ApiProperty()
-    dislikedGenres?: Genre[]
+  @ApiProperty()
+  dislikedGenres?: Genre[];
 }
 
 class WatchedHistory {
-    @ApiProperty()
-    contentId: string
+  @ApiProperty()
+  contentId: string;
 
-    @ApiProperty()
-    watchedOn: Date
+  @ApiProperty()
+  watchedOn: Date;
 
-    @ApiProperty()
-    rating?: number
+  @ApiProperty()
+  rating?: number;
 }
 
 class LikedContent {
-    @ApiProperty()
-    contentId: string;
+  @ApiProperty()
+  contentId: string;
 
-    @ApiProperty()
-    likedOn: Date
+  @ApiProperty()
+  likedOn: Date;
 }
 
 export class CreateUserDto {
@@ -33,15 +33,14 @@ export class CreateUserDto {
   username: string;
 
   @ApiProperty()
-  preferences?:Preferences
+  preferences?: Preferences;
 
   @ApiProperty()
-  watchedHistory?: WatchedHistory[]
+  watchedHistory?: WatchedHistory[];
 
   @ApiProperty()
-   likedMovies?: LikedContent[]
+  likedMovies?: LikedContent[];
 
-   @ApiProperty()
-   likedTvShows?: LikedContent[]
-
+  @ApiProperty()
+  likedTvShows?: LikedContent[];
 }

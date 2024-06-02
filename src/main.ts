@@ -5,10 +5,9 @@ import * as express from 'express';
 import * as dotenv from 'dotenv';
 
 // Load environment variables from .env file
-dotenv.config({path:'.env'});
+dotenv.config({ path: '.env' });
 
 async function bootstrap() {
-
   const app = await NestFactory.create(AppModule);
 
   const config = new DocumentBuilder()

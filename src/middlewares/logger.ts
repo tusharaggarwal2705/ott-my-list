@@ -11,7 +11,11 @@ export class LoggerMiddleware implements NestMiddleware {
     const { method, originalUrl: url, params, query, body } = req;
     const userAgent = req.get('user-agent') || '';
 
-    const logMessage = `[${method}] ${url} - Params: ${JSON.stringify(params)}, Query: ${JSON.stringify(query)}, Body: ${JSON.stringify(body)}, User-Agent: ${userAgent}`;
+    const logMessage = `[${method}] ${url} - Params: ${JSON.stringify(
+      params,
+    )}, Query: ${JSON.stringify(query)}, Body: ${JSON.stringify(
+      body,
+    )}, User-Agent: ${userAgent}`;
     this.logger.log(logMessage);
 
     next();

@@ -8,12 +8,21 @@ class ContentDto {
   @ApiProperty()
   description: string;
 
-  @ApiProperty({ enum: ['Action', 'Comedy', 'Drama', 'Fantasy', 'Horror', 'Romance', 'SciFi'] })
+  @ApiProperty({
+    enum: [
+      'Action',
+      'Comedy',
+      'Drama',
+      'Fantasy',
+      'Horror',
+      'Romance',
+      'SciFi',
+    ],
+  })
   genres: Genre[];
-
 }
 
-export class CreateMovieContentDto extends ContentDto{
+export class CreateMovieContentDto extends ContentDto {
   @ApiProperty()
   releasedDate: Date;
 
@@ -21,7 +30,7 @@ export class CreateMovieContentDto extends ContentDto{
   director: string;
 
   @ApiProperty()
-  actors: string[]
+  actors: string[];
 }
 
 class Episode {
@@ -38,10 +47,10 @@ class Episode {
   director: string;
 
   @ApiProperty()
-  actors: string[]
+  actors: string[];
 }
 
-export class CreateTVShowContentDto extends ContentDto{
+export class CreateTVShowContentDto extends ContentDto {
   @ApiProperty()
-  episodes: Episode[]
+  episodes: Episode[];
 }
