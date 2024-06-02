@@ -1,0 +1,946 @@
+{
+	"info": {
+		"_postman_id": "05249acf-a18c-42d9-a430-62ae6c632be3",
+		"name": "ott",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "16076561"
+	},
+	"item": [
+		{
+			"name": "content",
+			"item": [
+				{
+					"name": "create-content",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Second Show\",\n    \"description\": \"Comedy\",\n    \"genres\": [\n        \"Comedy\"\n    ],\n    \"episodes\": [\n        {\n            \"episodeNumber\": 1,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 2,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 3,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 4,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-07T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        }\n    ]\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/content/:contentType",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"content",
+								":contentType"
+							],
+							"variable": [
+								{
+									"key": "contentType",
+									"value": "tvshow"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create-content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n  \"title\":\"Second movie\",\n  \"description\":\"ksdfksdkfhskdfhksdhsdhf\",\n  \"genres\": [\"Comedy\",\"Drama\"],\n  \"releasedDate\":\"2024-06-01T15:01:22.094Z\",\n  \"director\":\"PriyaDarshan\",\n  \"actors\":[\"Akshay Kumar\",\"Suniel Shetty\"]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/content/:contentType",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"content",
+										":contentType"
+									],
+									"variable": [
+										{
+											"key": "contentType",
+											"value": "movie"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-P+XwZa5+NnkpQufhRyYrMEsjm5g\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Jun 2024 20:59:01 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"genres\": [\n        \"Comedy\",\n        \"Drama\"\n    ],\n    \"actors\": [\n        \"Akshay Kumar\",\n        \"Suniel Shetty\"\n    ],\n    \"_id\": \"665b8b951545ee87646298f8\",\n    \"title\": \"Second movie\",\n    \"description\": \"ksdfksdkfhskdfhksdhsdhf\",\n    \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n    \"director\": \"PriyaDarshan\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "create-content",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"title\": \"Second Show\",\n    \"description\": \"Comedy\",\n    \"genres\": [\n        \"Comedy\"\n    ],\n    \"episodes\": [\n        {\n            \"episodeNumber\": 1,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 2,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 3,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 4,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-07T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        }\n    ]\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/content/:contentType",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"content",
+										":contentType"
+									],
+									"variable": [
+										{
+											"key": "contentType",
+											"value": "tvshow"
+										}
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "644"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"284-BwRTjlnzG2LmDMM0aEZTO3KSM1E\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Jun 2024 21:17:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"genres\": [\n        \"Comedy\"\n    ],\n    \"episodes\": [\n        {\n            \"episodeNumber\": 1,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 2,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 3,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        },\n        {\n            \"episodeNumber\": 4,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-07T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Jeetu Bhaiya\"\n            ]\n        }\n    ],\n    \"_id\": \"665b8fe937f01a894e5e2669\",\n    \"title\": \"Second Show\",\n    \"description\": \"Comedy\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "get all content",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/content/:contentType",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"content",
+								":contentType"
+							],
+							"variable": [
+								{
+									"key": "contentType",
+									"value": "tvshow"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get all content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/content/:contentType",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"content",
+										":contentType"
+									],
+									"variable": [
+										{
+											"key": "contentType",
+											"value": "movie"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "485"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e5-zyA910d6WeiBKotxF5Iu5cnMQ8I\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Jun 2024 20:59:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"genres\": [\n            \"Action\",\n            \"Drama\"\n        ],\n        \"actors\": [\n            \"Akshay Kumar\",\n            \"Raveena Tandon\"\n        ],\n        \"_id\": \"665b8b6a1545ee87646298f6\",\n        \"title\": \"first movie\",\n        \"description\": \"ksdfksdkfhskdfhksdhsdhf\",\n        \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n        \"director\": \"RKHirani\",\n        \"__v\": 0\n    },\n    {\n        \"genres\": [\n            \"Comedy\",\n            \"Drama\"\n        ],\n        \"actors\": [\n            \"Akshay Kumar\",\n            \"Suniel Shetty\"\n        ],\n        \"_id\": \"665b8b951545ee87646298f8\",\n        \"title\": \"Second movie\",\n        \"description\": \"ksdfksdkfhskdfhksdhsdhf\",\n        \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n        \"director\": \"PriyaDarshan\",\n        \"__v\": 0\n    }\n]"
+						},
+						{
+							"name": "get all content",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/content/:contentType",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"content",
+										":contentType"
+									],
+									"variable": [
+										{
+											"key": "contentType",
+											"value": "tvshow"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1307"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"51b-hZVM/SONKSfrmt8cR/LfU6np+JQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Jun 2024 21:17:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"genres\": [\n            \"Drama\"\n        ],\n        \"episodes\": [\n            {\n                \"episodeNumber\": 1,\n                \"seasonNumber\": 1,\n                \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n                \"director\": \"PriyaDarshan\",\n                \"actors\": [\n                    \"Abhishek Bacchan\"\n                ]\n            },\n            {\n                \"episodeNumber\": 2,\n                \"seasonNumber\": 1,\n                \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n                \"director\": \"PriyaDarshan\",\n                \"actors\": [\n                    \"Abhishek Bacchan\"\n                ]\n            },\n            {\n                \"episodeNumber\": 3,\n                \"seasonNumber\": 1,\n                \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n                \"director\": \"PriyaDarshan\",\n                \"actors\": [\n                    \"Abhishek Bacchan\"\n                ]\n            },\n            {\n                \"episodeNumber\": 4,\n                \"seasonNumber\": 1,\n                \"releasedDate\": \"2024-06-07T15:01:22.094Z\",\n                \"director\": \"PriyaDarshan\",\n                \"actors\": [\n                    \"Abhishek Bacchan\"\n                ]\n            }\n        ],\n        \"_id\": \"665b8fb637f01a894e5e2667\",\n        \"title\": \"first Show\",\n        \"description\": \"suspense\",\n        \"__v\": 0\n    },\n    {\n        \"genres\": [\n            \"Comedy\"\n        ],\n        \"episodes\": [\n            {\n                \"episodeNumber\": 1,\n                \"seasonNumber\": 1,\n                \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n                \"director\": \"PriyaDarshan\",\n                \"actors\": [\n                    \"Jeetu bhaiya\"\n                ]\n            },\n            {\n                \"episodeNumber\": 2,\n                \"seasonNumber\": 1,\n                \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n                \"director\": \"PriyaDarshan\",\n                \"actors\": [\n                    \"Jeetu Bhaiya\"\n                ]\n            },\n            {\n                \"episodeNumber\": 3,\n                \"seasonNumber\": 1,\n                \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n                \"director\": \"PriyaDarshan\",\n                \"actors\": [\n                    \"Jeetu Bhaiya\"\n                ]\n            },\n            {\n                \"episodeNumber\": 4,\n                \"seasonNumber\": 1,\n                \"releasedDate\": \"2024-06-07T15:01:22.094Z\",\n                \"director\": \"PriyaDarshan\",\n                \"actors\": [\n                    \"Jeetu Bhaiya\"\n                ]\n            }\n        ],\n        \"_id\": \"665b8fe937f01a894e5e2669\",\n        \"title\": \"Second Show\",\n        \"description\": \"Comedy\",\n        \"__v\": 0\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "get by id",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/content/:contentType/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"content",
+								":contentType",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "contentType",
+									"value": "tvshow"
+								},
+								{
+									"key": "id",
+									"value": "665b8fb637f01a894e5e2667"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/content/:contentType/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"content",
+										":contentType",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "contentType",
+											"value": "movie"
+										},
+										{
+											"key": "id",
+											"value": "665b8b6a1545ee87646298f6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "239"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ef-meI9XT5QHtO1Tkyr7+txNw+7C8w\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Jun 2024 21:00:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"genres\": [\n        \"Action\",\n        \"Drama\"\n    ],\n    \"actors\": [\n        \"Akshay Kumar\",\n        \"Raveena Tandon\"\n    ],\n    \"_id\": \"665b8b6a1545ee87646298f6\",\n    \"title\": \"first movie\",\n    \"description\": \"ksdfksdkfhskdfhksdhsdhf\",\n    \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n    \"director\": \"RKHirani\",\n    \"__v\": 0\n}"
+						},
+						{
+							"name": "get by id",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/content/:contentType/:id",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"content",
+										":contentType",
+										":id"
+									],
+									"variable": [
+										{
+											"key": "contentType",
+											"value": "tvshow"
+										},
+										{
+											"key": "id",
+											"value": "665b8fb637f01a894e5e2667"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "660"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"294-fl1IX353OhsjsKCYtZgG/lEw8i0\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Jun 2024 21:18:09 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"genres\": [\n        \"Drama\"\n    ],\n    \"episodes\": [\n        {\n            \"episodeNumber\": 1,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Abhishek Bacchan\"\n            ]\n        },\n        {\n            \"episodeNumber\": 2,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Abhishek Bacchan\"\n            ]\n        },\n        {\n            \"episodeNumber\": 3,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-01T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Abhishek Bacchan\"\n            ]\n        },\n        {\n            \"episodeNumber\": 4,\n            \"seasonNumber\": 1,\n            \"releasedDate\": \"2024-06-07T15:01:22.094Z\",\n            \"director\": \"PriyaDarshan\",\n            \"actors\": [\n                \"Abhishek Bacchan\"\n            ]\n        }\n    ],\n    \"_id\": \"665b8fb637f01a894e5e2667\",\n    \"title\": \"first Show\",\n    \"description\": \"suspense\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "update content",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"genre\":\"Action\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/content/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"content",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "665b37fdea3b007bed0b8325"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete content",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/content/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"content",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "665b380dea3b007bed0b832f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "my-list",
+			"item": [
+				{
+					"name": "update like content",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/like-content/:contentType/:id/:contentId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"like-content",
+								":contentType",
+								":id",
+								":contentId"
+							],
+							"variable": [
+								{
+									"key": "contentType",
+									"value": "movie"
+								},
+								{
+									"key": "id",
+									"value": "665baaaf4e717791f7b3880f"
+								},
+								{
+									"key": "contentId",
+									"value": "665b8b6a1545ee87646298f6"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update like content",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user/like-content/:contentType/:id/:contentId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"like-content",
+										":contentType",
+										":id",
+										":contentId"
+									],
+									"variable": [
+										{
+											"key": "contentType",
+											"value": "movie"
+										},
+										{
+											"key": "id",
+											"value": "665baad54e717791f7b38813"
+										},
+										{
+											"key": "contentId",
+											"value": "665b8b6a1545ee87646298f7"
+										}
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "70"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46-sXOfJMLNF9Vvk+a4XgEbK7Y4HMM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Jun 2024 23:56:56 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 404,\n    \"message\": \"contentId not found\",\n    \"error\": \"Not Found\"\n}"
+						},
+						{
+							"name": "update like content",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"url": {
+									"raw": "{{baseUrl}}/user/like-content/:contentType/:id/:contentId",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user",
+										"like-content",
+										":contentType",
+										":id",
+										":contentId"
+									],
+									"variable": [
+										{
+											"key": "contentType",
+											"value": "movie"
+										},
+										{
+											"key": "id",
+											"value": "665baaaf4e717791f7b3880f"
+										},
+										{
+											"key": "contentId",
+											"value": "665b8b6a1545ee87646298f6"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"98-J2iVYMqEK8JIDRSACuT2vVEejm8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sun, 02 Jun 2024 04:43:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"likedTvShows\": [],\n    \"likedMovies\": [\n        \"665b8b6a1545ee87646298f6\"\n    ],\n    \"watchedHistory\": [],\n    \"_id\": \"665baaaf4e717791f7b3880f\",\n    \"username\": \"Tushar Aggarwal\",\n    \"__v\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "remove like content",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/remove-like-content/:contentType/:id/:contentId",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"remove-like-content",
+								":contentType",
+								":id",
+								":contentId"
+							],
+							"variable": [
+								{
+									"key": "contentType",
+									"value": "movie"
+								},
+								{
+									"key": "id",
+									"value": "665baaaf4e717791f7b3880f"
+								},
+								{
+									"key": "contentId",
+									"value": "665b8b6a1545ee87646298f6"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get liked content",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/user/liked-content/:id",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user",
+								"liked-content",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "665baaaf4e717791f7b3880f"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\":\"Beerculees Aggarwal\"\n}"
+						},
+						"url": {
+							"raw": "{{baseUrl}}/user",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"user"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "Content-Type",
+										"value": "application/json",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\":\"Beerculees Aggarwal\"\n}"
+								},
+								"url": {
+									"raw": "{{baseUrl}}/user",
+									"host": [
+										"{{baseUrl}}"
+									],
+									"path": [
+										"user"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "95"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"5f-LYEu7Pr5OEYM5s6cCOrY/C0l9EE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 01 Jun 2024 23:12:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"watchedHistory\": [],\n    \"_id\": \"665baad54e717791f7b38813\",\n    \"username\": \"Beerculees Aggarwal\",\n    \"__v\": 0\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
